@@ -32,11 +32,12 @@ Helpful hints and Resources:
 
 This assignment requires that you use two HTML elements that we haven't looked at so far.
 
-textarea: - HTML: HyperText Markup Language | MDN
+textarea: - [HTML: HyperText Markup Language | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
 
-and button : The Button element
+and button : [The Button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
  
 
 Submission Instructions:
 
 Submit your zipped folder, git log screenshot, contrast check screenshot, and a link to a GitHub repo containing your work.
+[Dropbox](https://learn.bcit.ca/d2l/le/content/880007/viewContent/7779113/View)
