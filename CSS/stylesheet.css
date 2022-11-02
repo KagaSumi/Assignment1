@@ -1,0 +1,52 @@
+body{
+    background-color: antiquewhite;
+}
+h1, h2{
+    text-align: center
+}   
+nav ul {
+    display:flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li {
+    padding:5px;
+}
+button{
+    background-color: aqua;
+    border: none;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    color:white;
+}
+#Dark{
+    background-color: grey;
+}
+#Cancel{
+    background-color: red;
+}
+section{
+    display:grid;
+    grid-template-columns: 1fr;
+}
+section div{
+    display:flex;
+    justify-content:space-between
+}
+.BottomFlexbox{
+    justify-content: flex-end;
+}
+section ul{
+    display:flex;
+}
+aside ul {
+    list-style-type: square;
+}
+footer nav ul{
+    flex-direction: row;
+}

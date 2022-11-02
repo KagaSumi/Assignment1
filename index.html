@@ -8,37 +8,55 @@
     <title>Assignment 1</title>
   </head>
   <body>
+    <header>
+      <h1>Take Better Notes</h1>
+      <nav>
+        <ul>
+          <li><a href="">About</a></li>
+          <li><a href="">Docs</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
-      <header>
-        <h1>Take Better Notes</h1>
-        <nav>
-          <ul>
-            <li><a href="">About</a></li>
-            <li><a href="">Docs</a></li>
-          </ul>
-        </nav>
-      </header>
       <section>
-      <button>New Note</button>
-      <button>Dark Theme</button>
-      <textarea>This is a placeholder</textarea>
-      <button>Save</button>
-      <button>Cancel</button>
-    </section>
-    <aside>
+        <div>
+          <button>New Note</button>
+          <button id="Dark">Dark Theme</button>
+        </div>
+        <textarea spellcheck="true" wrap="soft" placeholder="This is a placeholder"></textarea>
+        <div class="BottomFlexbox">
+          <button>Save</button>
+          <button id="Cancel">Cancel</button>
+        </div>
+      </section>
+      <aside>
         <h1>My Notes</h1>
         <ul>
-            <li>note one</li>
-            <li>note two</li>
+          <li>note one</li>
+          <li>note two</li>
         </ul>
-    </aside>
-    <footer>
+      </aside>
+      <footer>
         <h2>Keep in Touch</h2>
-        <ul>
-            <li><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_color-512.png" height="50px" alt="LinkedIn"></li>
-            <li><img src="https://cdn0.iconfinder.com/data/icons/internet-line/512/Internet_Line-02-512.png" height="50px" alt="Internet"></li>
-        </ul>
-    </footer>
+        <nav>
+          <ul>
+            <li>
+              <img
+                src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_color-512.png"
+                height="50px"
+                alt="LinkedIn"
+              />
+            </li>
+            <li>
+              <img
+                src="https://cdn0.iconfinder.com/data/icons/internet-line/512/Internet_Line-02-512.png"
+                height="50px"
+                alt="Internet"
+              />
+            </li>
+          </ul>
+        </nav>
+      </footer>
     </main>
   </body>
 </html>
