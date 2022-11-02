@@ -27,6 +27,12 @@ button{
     color:white;
     margin: 5px;
 }
+button:hover{
+    background-color: darkcyan;
+}
+button:active{
+    transform: translateY(2px);
+}
 textarea{
     resize: none;
     width: 100%;
@@ -35,9 +41,16 @@ textarea{
 #Dark{
     background-color: #6f6a87;
 }
+#Dark:hover{
+    background-color: #454253dc;
+}
 #Cancel{
     background-color: #d9827c;
 }
+#Cancel:hover{
+    background-color: red;
+}
+
 
 section div{
     display:flex;
@@ -60,7 +73,7 @@ footer nav ul{
     flex-direction: row;
     justify-content: center;
 }
-@media screen and (min-width: 600px){
+@media screen and (min-width: 768px){
     body{
         display:grid;
         grid-template-columns: 1fr 4fr;
