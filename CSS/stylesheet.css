@@ -1,5 +1,6 @@
 body{
     background-color: antiquewhite;
+    color:blue;
 }
 h1, h2{
     text-align: center
@@ -23,6 +24,11 @@ button{
     text-decoration: none;
     border-radius: 20px;
     color:white;
+}
+textarea{
+    resize: none;
+    width: 100%;
+    height: 200px;
 }
 #Dark{
     background-color: grey;
