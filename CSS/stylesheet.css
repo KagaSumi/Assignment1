@@ -54,7 +54,6 @@ textarea{
     background-color: red;
 }
 
-
 section div{
     display:flex;
     justify-content:space-between
@@ -71,6 +70,7 @@ aside{
 }
 aside ul {
     list-style-type: square;
+    text-align: center;
 }
 footer nav ul{
     flex-direction: row;
@@ -88,5 +88,8 @@ footer nav ul{
     } 
     aside{
         height:100%;
+    }
+    aside ul {
+        text-align: left;
     }
 }
