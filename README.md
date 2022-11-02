@@ -1,4 +1,4 @@
-# Assignment1
+# Assignment 1
 
 
 For the first assignment, you are going to create two responsive layouts for a note-taking website. (We'll add JS to this website in the second assignment)
