@@ -1,6 +1,6 @@
 body{
-    background-color: antiquewhite;
-    color:blue;
+    background-color: #f9f3ec;
+    color: #55869b;
     font-family: 'Montserrat', sans-serif;
 }
 h1, h2{
@@ -19,7 +19,7 @@ nav ul li {
     padding:5px;
 }
 button{
-    background-color: aqua;
+    background-color: #5394A0;
     border: none;
     padding: 10px;
     text-decoration: none;
@@ -30,13 +30,13 @@ button{
 textarea{
     resize: none;
     width: 100%;
-    height: 200px;
+    height: 100px;
 }
 #Dark{
-    background-color: grey;
+    background-color: #6f6a87;
 }
 #Cancel{
-    background-color: red;
+    background-color: #d9827c;
 }
 
 section div{
@@ -60,11 +60,10 @@ footer nav ul{
     flex-direction: row;
     justify-content: center;
 }
-@media screen and (min-width: 768px){
+@media screen and (min-width: 600px){
     body{
         display:grid;
         grid-template-columns: 1fr 4fr;
-        grid-template-rows: 100%;
         column-gap: 10px;
     }
     nav ul {
@@ -74,18 +73,4 @@ footer nav ul{
     aside{
         height:100%;
     }
-    .flexbox{
-        grid-column: 2;
-        /* grid-row: 1 */
-    }
-    aside{
-        grid-column: 1;
-        grid-row: 1/auto;
-    }
-    footer{
-        position:relative;
-        bottom: 0;
-        /* grid-column: ; */
-    }
-
 }
