@@ -26,7 +26,7 @@ Initialize a local repository and create one HTML page and one CSS file (saved i
 * Logical CSS, without redundant styles 3 points
 <img width="1266" alt="Screen Shot 2021-03-10 at 9 41 37 PM" src="https://user-images.githubusercontent.com/47546786/199379845-02ce5273-de35-4814-b8f0-4e07584b185b.png">
 
-Helpful hints and Resources:
+## Helpful hints and Resources
 
 This assignment requires that you use two HTML elements that we haven't looked at so far.
 
