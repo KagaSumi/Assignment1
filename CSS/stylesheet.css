@@ -54,7 +54,7 @@ textarea{
     background-color: #cc4c52;
 }
 
-section div{
+div.Text_box div{
     display:flex;
     justify-content:space-between
     
