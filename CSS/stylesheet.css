@@ -51,7 +51,7 @@ textarea{
     background-color: #d9827c;
 }
 #Cancel:hover{
-    background-color: rgb(204, 76, 82);
+    background-color: #cc4c52;
 }
 
 section div{
@@ -66,7 +66,7 @@ section ul{
     display:flex;
 }
 aside{
-    background-color: aliceblue;
+    background-color: #f0f8ff;
 }
 aside ul {
     list-style-type: square;
