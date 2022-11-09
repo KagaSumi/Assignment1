@@ -1,0 +1,101 @@
+body{
+    background-color: #f9f3ec;
+    color: #55869b;
+    font-family: 'Montserrat', sans-serif;
+}
+h1, h2{
+    text-align: center
+}   
+nav ul {
+    display:flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li {
+    padding:5px;
+}
+nav a{
+    text-decoration: none;
+}
+button{
+    background-color: #5394A0;
+    border: none;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    color:white;
+    margin: 5px;
+}
+button:hover{
+    background-color: darkcyan;
+}
+button:active{
+    transform: translateY(2px);
+}
+textarea{
+    resize: none;
+    width: 100%;
+    height: 100px;
+}
+#Dark{
+    background-color: #6f6a87;
+}
+#Dark:hover{
+    background-color: #454253dc;
+}
+#Cancel{
+    background-color: #d9827c;
+}
+#Cancel:hover{
+    background-color: #cc4c52;
+}
+
+div.Text_box div{
+    display:flex;
+    justify-content:space-between
+    
+}
+.BottomFlexbox{
+    justify-content: flex-end;
+}
+section ul{
+    display:flex;
+}
+aside{
+    background-color: #f0f8ff;
+}
+aside ul {
+    list-style-type: square;
+    text-align: center;
+}
+footer nav ul{
+    flex-direction: row;
+    justify-content: center;
+}
+footer ul li button{
+    background-color: #f9f3ec;
+}
+footer ul li button:hover{
+    background-color: #f9f3ec;
+}
+@media screen and (min-width: 768px){
+    body{
+        display:grid;
+        grid-template-columns: 1fr 4fr;
+        column-gap: 10px;
+    }
+    nav ul {
+        flex-direction: row;
+        justify-content: right;
+    } 
+    aside{
+        height:100%;
+    }
+    aside ul {
+        text-align: left;
+    }
+}
