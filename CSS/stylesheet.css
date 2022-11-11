@@ -86,6 +86,7 @@ footer ul li button:hover{
     body{
         display:grid;
         grid-template-columns: 1fr 4fr;
+        margin:0px;
         column-gap: 10px;
     }
     nav ul {
