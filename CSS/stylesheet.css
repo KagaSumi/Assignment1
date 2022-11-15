@@ -1,6 +1,6 @@
 body{
     background-color: #f9f3ec;
-    color: #55869b;
+    color: #3c5f6f;
     font-family: 'Montserrat', sans-serif;
 }
 h1, h2{
@@ -22,7 +22,7 @@ nav a{
     text-decoration: none;
 }
 button{
-    background-color: #5394A0;
+    background-color: #477C86;
     border: none;
     padding: 10px;
     text-decoration: none;
@@ -48,10 +48,10 @@ textarea{
     background-color: #454253dc;
 }
 #Cancel{
-    background-color: #d9827c;
+    background-color: #c14d4d;
 }
 #Cancel:hover{
-    background-color: #cc4c52;
+    background-color: #d9343c;
 }
 
 div.Text_box div{
