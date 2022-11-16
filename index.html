@@ -11,11 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet">
     <title>Assignment 1</title>
+    <script src="Javascript/script.js" defer></script>
   </head>
   <body>
     <aside>
       <h1>My Notes</h1>
-      <ul>
+      <ul class="NoteList">
         <li>note one</li>
         <li>note two</li>
       </ul>
@@ -32,8 +33,8 @@
           </nav>
         </section>
         <div class="Text_box">
-          <div>
-            <button>New Note</button>
+        <div>
+          <button id="NewNote">New Note</button>
             <button id="Dark">Dark Theme</button>
           </div>
           <textarea
@@ -41,7 +42,7 @@
             wrap="soft"
             placeholder="This is a placeholder"></textarea>
           <div class="BottomFlexbox">
-            <button>Save</button>
+            <button id="Save">Save</button>
             <button id="Cancel">Cancel</button>
           </div>
         </div>
