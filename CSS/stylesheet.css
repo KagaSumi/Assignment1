@@ -72,6 +72,9 @@ aside ul {
     list-style-type: square;
     text-align: center;
 }
+aside ul li {
+    cursor: pointer;
+}
 footer nav ul{
     flex-direction: row;
     justify-content: center;
