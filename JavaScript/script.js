@@ -4,13 +4,18 @@ class Note {
         this.title = title;
         this.body = body;
     }
-}
+};
 // Create a some temp objects to populate the list of notes
 let Note1 = new Note('note one','This is my first note');
 let Note2 = new Note('note two','This is my second note');
-let NoteArray = [Note1, Note2]
+let NoteArray = [Note1, Note2];
 const NoteList_HTML = document.querySelector(".NoteList");
-const NoteArea = document.getElementsByClassName('hide-note-area');
+const NoteAreaArray = [
+    document.getElementById('Cancel'),
+    document.getElementById('Save'),
+    document.querySelector('textarea'),
+]; 
+
 //Function for Saving notes to the note array.
 Add_to_List = (Title,Body) => {
     New_Note = new Note(Title,Body);
@@ -20,25 +25,26 @@ Add_to_List = (Title,Body) => {
     NoteList_HTML.append(ListElement);
     return;
 }
-show_elements = () => {
+show_elements = (Element) => {
     //TODO: hidden attributes on text elements on cancel and New_Note
-    if (NoteArea.hasAttribute('hidden')) {
-        NoteArea.toggleAttribute('hidden');
+    if (Element.hasAttribute('hidden')) {
+        Element.toggleAttribute('hidden');
     }   
 };
-hide_elements = () => {
+hide_elements = (Element) => {
     //TODO: hidden attributes on text elements on cancel and New_Note
-    if (!NoteArea.hasAttribute('hidden')){
-        NoteArea.toggleAttribute('hidden');
+    if (!Element.hasAttribute('hidden')){
+        Element.toggleAttribute('hidden');
     }
 };
-
+clear_text = () => 
+    document.querySelector('textarea').value = ''
 // Save Function
 document.getElementById("Save").addEventListener("click", function() {
     var title = prompt('Please enter a title for this note.')
     var body = document.querySelector('textarea').value
     Add_to_List(title,body)
-    document.querySelector('textarea').value = ''
+    clear_text()
 });
 
 //Accessing notes from aside menu
@@ -53,8 +59,20 @@ document.getElementById("Dark").addEventListener("click", function() {
 
 // New Note button
 document.getElementById("NewNote").addEventListener("click", function() {
-    //TODO Clear values in text area and make sure that are  show_elements
+    //TODO Clear values in text area and make sure that are show_elements
+    clear_text()
+    for (element of NoteAreaArray){
+    show_elements(element)
+}
 });
+
+//Cancel button
 document.getElementById("Cancel").addEventListener("click", function() {
     //TODO Clear Values in text area and hide elements once again.
+    clear_text();
+    for (element of NoteAreaArray){
+        hide_elements(element)
+    }
 });
+
+clear_text();
