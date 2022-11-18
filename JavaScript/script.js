@@ -10,7 +10,7 @@ let Note1 = new Note('note one','This is my first note');
 let Note2 = new Note('note two','This is my second note');
 let NoteArray = [Note1, Note2]
 const NoteList_HTML = document.querySelector(".NoteList");
-
+const NoteArea = document.getElementsByClassName('hide-note-area');
 //Function for Saving notes to the note array.
 Add_to_List = (Title,Body) => {
     New_Note = new Note(Title,Body);
@@ -22,9 +22,15 @@ Add_to_List = (Title,Body) => {
 }
 show_elements = () => {
     //TODO: hidden attributes on text elements on cancel and New_Note
+    if (NoteArea.hasAttribute('hidden')) {
+        NoteArea.toggleAttribute('hidden');
+    }   
 };
 hide_elements = () => {
     //TODO: hidden attributes on text elements on cancel and New_Note
+    if (!NoteArea.hasAttribute('hidden')){
+        NoteArea.toggleAttribute('hidden');
+    }
 };
 
 // Save Function
