@@ -26,13 +26,12 @@ Add_to_List = (Title,Body) => {
     return;
 }
 show_elements = (Element) => {
-    //TODO: hidden attributes on text elements on cancel and New_Note
     if (Element.hasAttribute('hidden')) {
         Element.toggleAttribute('hidden');
     }   
 };
 hide_elements = (Element) => {
-    //TODO: hidden attributes on text elements on cancel and New_Note
+    //TO
     if (!Element.hasAttribute('hidden')){
         Element.toggleAttribute('hidden');
     }
@@ -59,7 +58,6 @@ document.getElementById("Dark").addEventListener("click", function() {
 
 // New Note button
 document.getElementById("NewNote").addEventListener("click", function() {
-    //TODO Clear values in text area and make sure that are show_elements
     clear_text()
     for (element of NoteAreaArray){
     show_elements(element)
@@ -68,7 +66,6 @@ document.getElementById("NewNote").addEventListener("click", function() {
 
 //Cancel button
 document.getElementById("Cancel").addEventListener("click", function() {
-    //TODO Clear Values in text area and hide elements once again.
     clear_text();
     for (element of NoteAreaArray){
         hide_elements(element)

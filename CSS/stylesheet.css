@@ -55,11 +55,13 @@ textarea{
 }
 
 div.Text_box div{
-    display:flex;
+    display:flex;    
+}
+div.Text_box div {
     justify-content:space-between
     
 }
-.BottomFlexbox{
+div.Text_box div.BottomFlexbox{
     justify-content: flex-end;
 }
 section ul{
