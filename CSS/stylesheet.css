@@ -1,7 +1,14 @@
 body{
-    background-color: #f9f3ec;
-    color: #3c5f6f;
     font-family: 'Montserrat', sans-serif;
+}
+body.light{
+    background-color: #f9f3ec;
+    color: #3c5f6f;  
+}
+
+body.dark{
+    color: #f9f3ec;
+    background-color: #161616;  
 }
 h1, h2{
     text-align: center
@@ -40,11 +47,25 @@ textarea{
     resize: none;
     width: 100%;
     height: 100px;
+    border:0px;
 }
-#Dark{
+textarea.light{
+    background-color: white;
+    color: black;
+}
+textarea.dark{
+    background-color: #ffffff1a;
+    color: #f9f3ec;
+}
+#Dark.dark{
+    background-color: #f9f3ec;
+    color: #454253dc;
+}
+#Dark.light {
     background-color: #6f6a87;
+    color: #f9f3ec;
 }
-#Dark:hover{
+#Dark.light:hover{
     background-color: #454253dc;
 }
 #Cancel{
@@ -67,8 +88,11 @@ div.Text_box div.BottomFlexbox{
 section ul{
     display:flex;
 }
-aside{
+aside.light{
     background-color: #f0f8ff;
+}
+aside.dark{
+    background-color: #ffffff1a;
 }
 aside ul {
     list-style-type: square;
@@ -81,11 +105,17 @@ footer nav ul{
     flex-direction: row;
     justify-content: center;
 }
-footer ul li button{
+footer ul li button.light{
     background-color: #f9f3ec;
 }
-footer ul li button:hover{
+footer ul li button.light:hover{
     background-color: #f9f3ec;
+}
+footer ul li button.dark{
+    background-color: #161616;
+}
+footer ul li button.dark:hover{
+    background-color: #161616;
 }
 @media screen and (min-width: 768px){
     body{
