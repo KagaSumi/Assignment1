@@ -14,7 +14,8 @@ const NoteAreaArray = [
     document.getElementById('Cancel'),
     document.getElementById('Save'),
     document.querySelector('textarea'),
-]; 
+];
+const Note_List = document.querySelectorAll('aside ul li');  
 
 //Function for Saving notes to the note array.
 Add_to_List = (Title,Body) => {
@@ -23,21 +24,35 @@ Add_to_List = (Title,Body) => {
     ListElement.innerText = Title;
     NoteArray.push(New_Note)
     NoteList_HTML.append(ListElement);
-    return;
-}
-show_elements = (Element) => {
-    if (Element.hasAttribute('hidden')) {
-        Element.toggleAttribute('hidden');
-    }   
+    ListElement.addEventListener("click", function() {
+        show_elements()
+        for (element of NoteArray){
+            if (element.title == event.target.innerText){
+                document.querySelector('textarea').value = element.body
+            }
+        };
+        
+    });
 };
-hide_elements = (Element) => {
-    //TO
-    if (!Element.hasAttribute('hidden')){
-        Element.toggleAttribute('hidden');
+show_elements = () => {
+    //Hides NoteAreaArray elements visibility
+    for (element of NoteAreaArray){
+        if (element.hasAttribute('hidden')) {
+            element.toggleAttribute('hidden');
+        }      
     }
 };
+hide_elements = () => {
+    //Hides NoteAreaArray elements visibility
+    for (element of NoteAreaArray){
+    if (!element.hasAttribute('hidden')){
+        element.toggleAttribute('hidden');
+    }
+    }
+};
+
 clear_text = () => 
-    document.querySelector('textarea').value = ''
+    document.querySelector('textarea').value = '';
 // Save Function
 document.getElementById("Save").addEventListener("click", function() {
     var title = prompt('Please enter a title for this note.')
@@ -47,9 +62,18 @@ document.getElementById("Save").addEventListener("click", function() {
 });
 
 //Accessing notes from aside menu
-document.querySelector('aside ul li').addEventListener("click", function() {
-    document.querySelector('textarea').value = Note.body
+
+for (element of Note_List){
+element.addEventListener("click", function() {
+    show_elements()
+    for (element of NoteArray){
+        if (element.title == event.target.innerText){
+            document.querySelector('textarea').value = element.body
+        }
+    };
+    
 });
+};
 
 // Dark Mode button
 document.getElementById("Dark").addEventListener("click", function() {
@@ -59,17 +83,14 @@ document.getElementById("Dark").addEventListener("click", function() {
 // New Note button
 document.getElementById("NewNote").addEventListener("click", function() {
     clear_text()
-    for (element of NoteAreaArray){
-    show_elements(element)
-}
+    show_elements()
+
 });
 
 //Cancel button
 document.getElementById("Cancel").addEventListener("click", function() {
-    clear_text();
-    for (element of NoteAreaArray){
-        hide_elements(element)
-    }
+    hide_elements();
 });
 
+hide_elements();
 clear_text();
