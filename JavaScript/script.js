@@ -16,7 +16,10 @@ const NoteAreaArray = [
     document.querySelector('textarea'),
 ];
 const Note_List = document.querySelectorAll('aside ul li');  
-
+const Color_List=[]
+for (element of document.getElementsByClassName('light')){
+    Color_List.push(element);
+}
 //Function for Saving notes to the note array.
 Add_to_List = (Title,Body) => {
     New_Note = new Note(Title,Body);
@@ -35,12 +38,13 @@ Add_to_List = (Title,Body) => {
     });
 };
 show_elements = () => {
-    //Hides NoteAreaArray elements visibility
+    //Hides NoteAreaArray elements visibility & Clear text in the textarea
     for (element of NoteAreaArray){
         if (element.hasAttribute('hidden')) {
             element.toggleAttribute('hidden');
         }      
     }
+    clear_text()
 };
 hide_elements = () => {
     //Hides NoteAreaArray elements visibility
@@ -61,30 +65,32 @@ document.getElementById("Save").addEventListener("click", function() {
     clear_text()
 });
 
-//Accessing notes from aside menu
 
+//Assigns the preexisting notes click function
 for (element of Note_List){
-element.addEventListener("click", function() {
-    show_elements()
-    for (element of NoteArray){
-        if (element.title == event.target.innerText){
-            document.querySelector('textarea').value = element.body
-        }
+    element.addEventListener("click", function() {
+        show_elements()
+        for (element of NoteArray){
+            if (element.title == event.target.innerText){
+                document.querySelector('textarea').value = element.body
+            }
+        };
+        
+    });
     };
-    
-});
-};
 
 // Dark Mode button
 document.getElementById("Dark").addEventListener("click", function() {
     // TODO Toggle background color classes
+    for (element of Color_List){
+        element.classList.toggle('light')
+        element.classList.toggle('dark')
+    };
 });
 
 // New Note button
 document.getElementById("NewNote").addEventListener("click", function() {
-    clear_text()
     show_elements()
-
 });
 
 //Cancel button
@@ -93,4 +99,3 @@ document.getElementById("Cancel").addEventListener("click", function() {
 });
 
 hide_elements();
-clear_text();
