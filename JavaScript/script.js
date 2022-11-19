@@ -33,8 +33,7 @@ Add_to_List = (Title,Body) => {
             if (element.title == event.target.innerText){
                 document.querySelector('textarea').value = element.body
             }
-        };
-        
+        }; 
     });
 };
 show_elements = () => {
