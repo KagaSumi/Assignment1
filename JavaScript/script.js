@@ -86,6 +86,12 @@ document.getElementById("Dark").addEventListener("click", function() {
         element.classList.toggle('light')
         element.classList.toggle('dark')
     };
+    if (event.target.innerText =='Dark Theme'){
+        event.target.innerText = 'Light Theme'
+    }
+    else{
+        event.target.innerText = 'Dark Theme'
+    }
 });
 
 // New Note button
