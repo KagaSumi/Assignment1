@@ -98,5 +98,3 @@ document.getElementById("NewNote").addEventListener("click", function() {
 document.getElementById("Cancel").addEventListener("click", function() {
   hide_elements();
 });
-
-hide_elements();
