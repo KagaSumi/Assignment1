@@ -28,6 +28,12 @@ nav ul li {
 nav a{
     text-decoration: none;
 }
+nav a.dark{
+    color:#ffffff
+}
+nav a.dark:visited{
+    color:#aaaaaa
+}
 button{
     background-color: #477C86;
     border: none;
