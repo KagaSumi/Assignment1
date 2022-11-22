@@ -13,12 +13,12 @@ let NoteArray = [Note1, Note2];
 
 // Setting some often called arrays and variables for site functionality
 const NoteList_HTML = document.querySelector(".NoteList");
-const NoteAreaArray = [
+const NoteArea = [
   document.getElementById("Cancel"),
   document.getElementById("Save"),
   document.querySelector("textarea")
 ];
-const Note_List = document.querySelectorAll("aside ul li");
+const Note_List = document.querySelector("aside ul");
 const Color_List = [];
 for (element of document.getElementsByClassName("light")) {
   Color_List.push(element);
@@ -31,22 +31,21 @@ Add_to_List = (Title, Body) => {
   ListElement.innerText = Title;
   NoteArray.push(New_Note);
   NoteList_HTML.append(ListElement);
-  ListElement.addEventListener("click", FindNote);
 };
 
 // Function to refer note's body
 FindNote = event => {
   show_elements();
-  for (element of NoteArray) {
-    if (element.title == event.target.innerText) {
-      document.querySelector("textarea").value = element.body;
+  for (note of NoteArray) {
+    if (note.title == event.target.innerText) {
+      document.querySelector("textarea").value = note.body;
     }
   }
 };
 
-//Show NoteAreaArray elements visibility & Clear text in the textarea
+//Show NoteArea elements visibility & Clear text in the textarea
 show_elements = () => {
-  for (element of NoteAreaArray) {
+  for (element of NoteArea) {
     if (element.hasAttribute("hidden")) {
       element.toggleAttribute("hidden");
     }
@@ -67,9 +66,9 @@ dark_light_mode = event => {
   }
 };
 
-//Hides NoteAreaArray elements visibility
+//Hides NoteArea elements visibility
 hide_elements = () => {
-  for (element of NoteAreaArray) {
+  for (element of NoteArea) {
     if (!element.hasAttribute("hidden")) {
       element.toggleAttribute("hidden");
     }
@@ -87,10 +86,8 @@ save = () => {
   clear_text();
 };
 
-//Assigns the preexisting notes click function
-Note_List.forEach(element => {
-  element.addEventListener("click", FindNote);
-});
+// Add listener to aside ul to find notes
+Note_List.addEventListener("click",FindNote);
 
 // Save Button Function
 document.getElementById("Save").addEventListener("click", save);
@@ -106,3 +103,4 @@ document.getElementById("Cancel").addEventListener("click", hide_elements);
 
 //Clearing the textarea on refresh as we don't want users to have a fresh session
 clear_text();
+
