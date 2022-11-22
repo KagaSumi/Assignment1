@@ -31,7 +31,7 @@ Add_to_List = (Title, Body) => {
   ListElement = document.createElement("li");
   ListElement.innerText = Title;
   NoteArray.push(New_Note);
-  NoteList_HTML.append(ListElement);
+  NoteList_HTML.appendChild(ListElement);
 };
 
 // Function to refer note's body
