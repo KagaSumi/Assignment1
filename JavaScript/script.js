@@ -13,16 +13,17 @@ let NoteArray = [Note1, Note2];
 
 // Setting some often called arrays and variables for site functionality
 const NoteList_HTML = document.querySelector(".NoteList");
+const Note_List = document.querySelector("aside ul");
 const NoteArea = [
   document.getElementById("Cancel"),
   document.getElementById("Save"),
   document.querySelector("textarea")
 ];
-const Note_List = document.querySelector("aside ul");
+
 const Color_List = [];
 for (element of document.getElementsByClassName("light")) {
   Color_List.push(element);
-}
+};
 
 //Function for Saving notes to the note array.
 Add_to_List = (Title, Body) => {
@@ -103,4 +104,3 @@ document.getElementById("Cancel").addEventListener("click", hide_elements);
 
 //Clearing the textarea on refresh as we don't want users to have a fresh session
 clear_text();
-
