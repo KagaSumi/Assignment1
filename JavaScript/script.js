@@ -5,6 +5,7 @@ class Note {
     this.body = body;
   }
 }
+
 // Create a some temp objects to populate the list of notes
 let Note1 = new Note("note one", "This is my first note");
 let Note2 = new Note("note two", "This is my second note");
