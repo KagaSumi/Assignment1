@@ -9,6 +9,8 @@ class Note {
 let Note1 = new Note("note one", "This is my first note");
 let Note2 = new Note("note two", "This is my second note");
 let NoteArray = [Note1, Note2];
+
+// Setting some often called arrays and variables for site functionality
 const NoteList_HTML = document.querySelector(".NoteList");
 const NoteAreaArray = [
   document.getElementById("Cancel"),
@@ -30,6 +32,7 @@ Add_to_List = (Title, Body) => {
   NoteList_HTML.append(ListElement);
   ListElement.addEventListener("click", FindNote);
 };
+
 // Function to refer note's body
 FindNote = event => {
   show_elements();
@@ -83,13 +86,13 @@ save = () => {
   clear_text();
 };
 
+//Assigns the preexisting notes click function
+Note_List.forEach(element => {
+  element.addEventListener("click", FindNote);
+});
+
 // Save Button Function
 document.getElementById("Save").addEventListener("click", save);
-
-//Assigns the preexisting notes click function
-for (element of Note_List) {
-  element.addEventListener("click", FindNote);
-}
 
 // Dark Mode button
 document.getElementById("Dark").addEventListener("click", dark_light_mode);
@@ -100,4 +103,5 @@ document.getElementById("NewNote").addEventListener("click", show_elements);
 //Cancel button
 document.getElementById("Cancel").addEventListener("click", hide_elements);
 
+//Clearing the textarea on refresh as we don't want users to have a fresh session
 clear_text();
