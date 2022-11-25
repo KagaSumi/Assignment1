@@ -35,13 +35,22 @@ nav a.dark:visited{
     color:#aaaaaa
 }
 button{
-    background-color: #477C86;
     border: none;
     padding: 10px;
     text-decoration: none;
     border-radius: 10px;
     color:white;
     margin: 5px;
+}
+button.light{
+    background-color: #477C86;
+}
+button.dark{
+    background-color: #647088eb;
+
+}
+button.dark:hover{
+    background-color: #6380baeb;
 }
 button:hover{
     background-color: darkcyan;
@@ -77,10 +86,16 @@ textarea.dark{
 #Dark.light:hover{
     background-color: #454253dc;
 }
-#Cancel{
+#Cancel.light{
     background-color: #c14d4d;
 }
-#Cancel:hover{
+#Cancel.dark{
+    background-color: #632424;
+}
+#Cancel.dark:hover{
+    background-color: #94242a;
+}
+#Cancel.light:hover{
     background-color: #d9343c;
 }
 
