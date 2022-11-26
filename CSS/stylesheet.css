@@ -47,7 +47,6 @@ button.light{
 }
 button.dark{
     background-color: #647088eb;
-
 }
 button.dark:hover{
     background-color: #6380baeb;

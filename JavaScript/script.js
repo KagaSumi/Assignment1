@@ -46,12 +46,14 @@ FindNote = event => {
 
 //Show NoteArea elements visibility & Clear text in the textarea
 show_elements = () => {
+  if (!document.querySelector("textarea").hasAttribute("hidden")) {
+    clear_text();
+  }
   for (element of NoteArea) {
     if (element.hasAttribute("hidden")) {
       element.toggleAttribute("hidden");
     }
   }
-  clear_text();
 };
 
 // Function for setting dark and light theme
