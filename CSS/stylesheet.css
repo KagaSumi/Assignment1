@@ -5,12 +5,11 @@ body.light{
     background-color: #f9f3ec;
     color: #3c5f6f;  
 }
-
 body.dark{
     color: #f9f3ec;
     background-color: #161616;  
 }
-h1, h2{
+h1,h2{
     text-align: center
 }   
 nav ul {
@@ -97,13 +96,11 @@ textarea.dark{
 #Cancel.light:hover{
     background-color: #d9343c;
 }
-
 div.Text_box div{
     display:flex;    
 }
 div.Text_box div {
     justify-content:space-between
-    
 }
 div.Text_box div.BottomFlexbox{
     justify-content: flex-end;
