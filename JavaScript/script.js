@@ -25,7 +25,7 @@ for (element of document.getElementsByClassName("light")) {
   Color_List.push(element);
 };
 
-//Function for Saving notes to the note array.
+// Function for Saving notes to the note array.
 Add_to_List = (Title, Body) => {
   New_Note = new Note(Title, Body);
   ListElement = document.createElement("li");
@@ -44,7 +44,7 @@ FindNote = event => {
   }
 };
 
-//Show NoteArea elements visibility & Clear text in the textarea
+// Show NoteArea elements visibility & Clear text in the textarea
 show_elements = () => {
   if (!document.querySelector("textarea").hasAttribute("hidden")) {
     clear_text();
@@ -69,7 +69,7 @@ dark_light_mode = event => {
   }
 };
 
-//Hides NoteArea elements visibility
+// Hides NoteArea elements visibility
 hide_elements = () => {
   for (element of NoteArea) {
     if (!element.hasAttribute("hidden")) {
@@ -78,7 +78,7 @@ hide_elements = () => {
   }
 };
 
-// Clear text area value
+// Function for clearing the text area value
 clear_text = () => (document.querySelector("textarea").value = "");
 
 // Function for saving notes
@@ -101,8 +101,8 @@ document.getElementById("Dark").addEventListener("click", dark_light_mode);
 // New Note button
 document.getElementById("NewNote").addEventListener("click", show_elements);
 
-//Cancel button
+// Cancel button
 document.getElementById("Cancel").addEventListener("click", hide_elements);
 
-//Clearing the textarea on refresh as we don't want users to have a fresh session
+// Clearing the textarea on refresh as we don't want users to have text in the textarea.
 clear_text();
