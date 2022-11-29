@@ -13,7 +13,6 @@ let NoteArray = [Note1, Note2];
 
 // Setting some often called arrays and variables for site functionality
 const NoteList_HTML = document.querySelector(".NoteList");
-const Note_List = document.querySelector("aside ul");
 const NoteArea = [
   document.getElementById("Cancel"),
   document.getElementById("Save"),
@@ -90,7 +89,7 @@ save = () => {
 };
 
 // Add listener to aside ul to find notes
-Note_List.addEventListener("click",FindNote);
+NoteList_HTML.addEventListener("click",FindNote);
 
 // Save Button Function
 document.getElementById("Save").addEventListener("click", save);
